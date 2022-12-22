@@ -29,14 +29,5 @@ def is_even():
     return question() % 2 == 0 and 'yes' or 'no'
 
 
-def result_of_answer():
-    if answer() == is_even():
-        print('Correct!')
-    else:
-        print(f"'{answer()}' is wrong answer ;(. "
-              f"Correct answer was '{is_even()}'.")
-        print(f"Let's try again, {name_of_gamer}!")
-
-
 def congrats():
     print(f'Congratulations, {name_of_gamer}!')
