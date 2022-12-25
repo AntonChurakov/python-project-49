@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import prompt
-from random import randrange
+from random import randint
 
 
 def welcome_user():
@@ -19,7 +19,7 @@ number_random_range = 99
 
 
 def question():
-    number_from_question = randrange(number_random_range)
+    number_from_question = randint(1, number_random_range)
     print(f'Question: {number_from_question}')
     return number_from_question
 
@@ -27,10 +27,6 @@ def question():
 def answer():
     answer_of_gamer = prompt.string('Your answer: ')
     return answer_of_gamer
-
-
-def is_even():
-    return question() % 2 == 0 and 'yes' or 'no'
 
 
 def congrats():
