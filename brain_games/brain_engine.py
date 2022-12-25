@@ -6,9 +6,13 @@ from random import randrange
 
 def welcome_user():
     print('Welcome to the Brain Games!')
+
+
+def name_of_gamer():
     global name_of_gamer
     name_of_gamer = prompt.string('May I have your name? ')
     print(f'Hello, {name_of_gamer}!')
+    return name_of_gamer
 
 
 number_random_range = 99
