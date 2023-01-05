@@ -4,3 +4,5 @@
 <a href="https://codeclimate.com/github/AntonChurakov/python-project-49/maintainability"><img src="https://api.codeclimate.com/v1/badges/d7814179c1950a61f6ea/maintainability" /></a>
 
 https://asciinema.org/a/JJ5xKsvivsimtKI0jRmvPkHzx
+
+https://asciinema.org/a/VUd1FAD9kiMrWTuVjPwscqmdx
