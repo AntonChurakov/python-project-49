@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import prompt
-quantity_of_correct_answers = 3
+QUANTITY_OF_CORRECT_ANSWERS = 3
 
 
 def launch_game(game):
@@ -11,7 +11,7 @@ def launch_game(game):
     print(game.rules_of_game)
 
     counter = 0
-    for _ in range(quantity_of_correct_answers):
+    for _ in range(QUANTITY_OF_CORRECT_ANSWERS):
         correct_answer = game.question()
         gamer_answer = prompt.string('Your answer: ')
         if gamer_answer == correct_answer:
