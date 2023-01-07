@@ -9,7 +9,8 @@ def launch_game(game):
     print(game.rules_of_game)
 
     for _ in range(QUANTITY_OF_CORRECT_ANSWERS):
-        correct_answer = game.question()
+        question, correct_answer = game.question()
+        print(f'Question: {question}')
         gamer_answer = prompt.string('Your answer: ')
 
         if gamer_answer != correct_answer:

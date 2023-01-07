@@ -18,5 +18,5 @@ def question():
     correct_answer = list_of_progression[index_of_hided_element]
     list_of_progression[index_of_hided_element] = '..'
     list_as_string = ' '.join(list_of_progression)
-    print(f'Question: {list_as_string}')
-    return correct_answer
+    question = f'{list_as_string}'
+    return question, correct_answer
