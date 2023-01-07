@@ -1,7 +1,7 @@
 from random import randint
 import random
 import operator
-rules_of_game = 'What is the correct_answer of the expression?'
+rules_of_game = 'What is the result of the expression?'
 
 
 def question():
