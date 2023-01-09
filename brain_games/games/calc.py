@@ -1,21 +1,20 @@
 from random import randint
 import random
-import operator
-rules_of_game = 'What is the result of the expression?'
+RULES_OF_GAME = 'What is the result of the expression?'
 
 
-def question():
+def generate_question_and_answer():
     number_random_range = 25
-    operators_list = ["+", "-", "*"]
+    operators = ["+", "-", "*"]
     first_operand = randint(1, number_random_range)
     second_operand = randint(1, number_random_range)
-    math_operator = random.choice(operators_list)
+    math_operator = random.choice(operators)
 
     question = f'{first_operand} {math_operator} {second_operand}'
     if math_operator == '+':
-        correct_answer = operator.add(first_operand, second_operand)
+        correct_answer = first_operand + second_operand
     elif math_operator == '-':
-        correct_answer = operator.sub(first_operand, second_operand)
-    else:
-        correct_answer = operator.mul(first_operand, second_operand)
+        correct_answer = first_operand - second_operand
+    elif math_operator == '*':
+        correct_answer = first_operand * second_operand
     return question, str(correct_answer)

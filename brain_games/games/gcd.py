@@ -1,10 +1,10 @@
 from random import randint
 import math
 number_random_range = 99
-rules_of_game = 'Find the greatest common divisor of given numbers.'
+RULES_OF_GAME = 'Find the greatest common divisor of given numbers.'
 
 
-def question():
+def generate_question_and_answer():
     first_number = randint(1, number_random_range)
     second_number = randint(1, number_random_range)
     question = f'{first_number} {second_number}'

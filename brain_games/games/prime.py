@@ -1,22 +1,26 @@
 from random import randint
+import math
 
 number_random_range = 99
-rules_of_game = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+RULES_OF_GAME = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def question():
+def generate_question_and_answer():
     number_from_question = randint(1, number_random_range)
     question = f'{number_from_question}'
 
-    if number_from_question < 2:
-        return question, 'no'
+    def is_prime():
+        if number_from_question < 2:
+            return False
+        number_sqrt = int(math.sqrt(number_from_question))
+        divisors = range(2, (number_sqrt + 1))
+        for element in divisors:
+            if number_from_question % element == 0:
+                return False
+        return True
 
-    divider = 2
-
-    while divider <= number_from_question / 2:
-        if number_from_question % divider == 0:
-            return question, 'no'
-
-        divider += 1
-
-    return question, 'yes'
+    if is_prime():
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
+    return question, correct_answer

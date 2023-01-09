@@ -1,15 +1,15 @@
 import prompt
-QUANTITY_OF_CORRECT_ANSWERS = 3
+ROUNDS_QUANTITY = 3
 
 
-def launch_game(game):
+def launch(game):
     print('Welcome to the Brain Games!')
     name_of_gamer = prompt.string('May I have your name? ')
     print(f'Hello, {name_of_gamer}!')
-    print(game.rules_of_game)
+    print(game.RULES_OF_GAME)
 
-    for _ in range(QUANTITY_OF_CORRECT_ANSWERS):
-        question, correct_answer = game.question()
+    for _ in range(ROUNDS_QUANTITY):
+        question, correct_answer = game.generate_question_and_answer()
         print(f'Question: {question}')
         gamer_answer = prompt.string('Your answer: ')
 
@@ -18,7 +18,6 @@ def launch_game(game):
 Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name_of_gamer}!")
             break
-        if gamer_answer == correct_answer:
-            print('Correct!')
+        print('Correct!')
     else:
         print(f'Congratulations, {name_of_gamer}!')
