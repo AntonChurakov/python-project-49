@@ -1,12 +1,12 @@
 from random import randint
-length_of_progression = 10
-number_random_range = 99
-max_common_difference = 10
+
 RULES_OF_GAME = 'What number is missing in the progression?'
 
 
 def generate_question_and_answer():
-    start_element_of_progression = randint(0, number_random_range)
+    length_of_progression = 10
+    max_common_difference = 10
+    start_element_of_progression = randint(0, 99)
     common_difference = randint(1, max_common_difference)
     progression = []
 
