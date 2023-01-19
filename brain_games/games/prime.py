@@ -14,12 +14,12 @@ def generate_question_and_answer():
     return question, correct_answer
 
 
-def is_prime(number_from_question):
-    if number_from_question < 2:
+def is_prime(number):
+    if number < 2:
         return False
-    number_sqrt = int(math.sqrt(number_from_question))
+    number_sqrt = int(math.sqrt(number))
     divisors = range(2, (number_sqrt + 1))
     for element in divisors:
-        if number_from_question % element == 0:
+        if number % element == 0:
             return False
     return True
